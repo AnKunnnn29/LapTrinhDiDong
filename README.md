@@ -1,4 +1,4 @@
-# lapNhom
+# labNhom
 
 Đây là một dự án ứng dụng Android đơn giản bao gồm chức năng đăng nhập, đăng ký tài khoản được kích hoạt bằng OTP qua email và quên mật khẩu bằng OTP qua email.
 
