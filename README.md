@@ -15,3 +15,9 @@
 1.  Clone repository này.
 2.  Mở dự án trong Android Studio.
 3.  Chạy ứng dụng trên trình giả lập hoặc thiết bị vật lý.
+
+
+==============================================
+Giao diện đăng nhập
+==============================================
+
