@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".OTP_VerificationActivity">
 
-    <!-- Logo ở trên cùng -->
     <ImageView
         android:id="@+id/img_start_logo"
-        android:layout_width="277dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        android:src="@drawable/otp"
+        android:src="@drawable/start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,98 +21,55 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/otp_form_container"
-        android:layout_width="0dp"
+        android:layout_width="364dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:alpha="0.8"
         android:background="@drawable/wood"
         android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_start_logo">
 
-        <TextView
-            android:id="@+id/tvOtpDescription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_start_logo"
+        app:layout_constraintVertical_bias="0.289">
+
+        <EditText
+            android:id="@+id/et_otp"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/rounded_edit"
             android:gravity="center"
-            android:text="Mã OTP đã được gửi đến email của bạn.\nVui lòng nhập mã để xác thực tài khoản."
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#CCCCCC"
+
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/etOtpInput"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded_edit"
-            android:gravity="center"
-            android:hint="Nhập mã OTP"
-            android:inputType="number"
-            android:letterSpacing="0.2"
-            android:maxLength="6"
-            android:textColor="@android:color/white"
-            android:textColorHint="#CCCCCC"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvOtpDescription" />
-
         <Button
-            android:id="@+id/btnVerifyOtp"
+            android:id="@+id/btn_verify"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
             android:backgroundTint="#8BC34A"
-            android:text="Xác nhận OTP"
+            android:text="Verify"
             android:textColor="#000000"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/etOtpInput"
-            app:layout_constraintStart_toStartOf="@+id/etOtpInput"
-            app:layout_constraintTop_toBottomOf="@+id/etOtpInput" />
-
-        <Button
-            android:id="@+id/btnResendOtp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#FF9800"
-            android:text="Gửi lại mã OTP"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/btnVerifyOtp"
-            app:layout_constraintStart_toStartOf="@+id/btnVerifyOtp"
-            app:layout_constraintTop_toBottomOf="@+id/btnVerifyOtp" />
-
-        <TextView
-            android:id="@+id/tvOtpMessage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:padding="8dp"
-            android:shadowColor="#000000"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="1"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnResendOtp" />
+            app:layout_constraintTop_toBottomOf="@+id/et_otp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
